@@ -1,4 +1,14 @@
-# Create T3 App
+# Spelling app
+
+This is a simple spelling app that was first written in 2005. It was made in excel and was used to teach me better Dutch and prepare me for the Dutch spelling exam. Now I try to write the same app with Nextjs and the T3 Stack.
+
+## Features
+
+[] Auth and User Mangement
+[] Spelling tests
+[] Spelling results
+
+# T3 Stack
 
 This is an app bootstrapped according to the [init.tips](https://init.tips) stack, also known as the T3-Stack.
 
