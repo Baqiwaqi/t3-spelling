@@ -13,7 +13,7 @@ export default function MainLayout({ children }: Props) {
       </Head>
       <div className="bg-white text-zinc-800 break-words leading-6 font-mono min-h-screen">
         <Header />
-        <div>
+        <div className="p-8 pt-[110px]">
           {children}
         </div>
       </div>

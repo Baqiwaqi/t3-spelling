@@ -17,6 +17,30 @@ model Example {
     id String @id @default(cuid())
 }
 
+model Word {
+    id String @id @default(cuid())
+    word String
+    PracticeSessionWord PracticeSessionWord[]
+}
+
+model PracticeSession {
+    id String @id @default(cuid())
+    createdAt DateTime @default(now())
+    userId String
+    user User @relation(fields: [userId], references: [id])
+    practiceSessionWords PracticeSessionWord[]
+}
+
+model PracticeSessionWord {
+    id String @id @default(cuid())
+    practiceSessionId String
+    practiceSession PracticeSession @relation(fields: [practiceSessionId], references: [id])
+    wordId String
+    word Word @relation(fields: [wordId], references: [id])
+    correct Boolean
+    createdAt DateTime @default(now())
+}
+
 // Necessary for Next auth
 model Account {
     id                String  @id @default(cuid())
@@ -52,6 +76,7 @@ model User {
     image         String?
     accounts      Account[]
     sessions      Session[]
+    practices     PracticeSession[]
 }
 
 model VerificationToken {

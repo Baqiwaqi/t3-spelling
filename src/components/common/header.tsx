@@ -6,11 +6,13 @@ const Header = () => {
     <header className="fixed w-full z-30 bg-white text-zinc-800" >
       <div className="mx-24 py-8">
         <nav className="flex item-center justify-between text-base">
-          <h2 className="text-2xl font-bold py-2">
-            T3-spell
-          </h2>
+          <NextLink href="/">
+            <h2 className="text-2xl font-bold py-2">
+              T3-spell
+            </h2>
+          </NextLink>
           <div className="items-center gap-8 hidden md:flex py-2">
-            <HeaderLink href="/about" name="Oefenen" />
+            <HeaderLink href="/practice" name="Oefenen" />
           </div>
           <AuthShowcase />
         </nav>

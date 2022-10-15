@@ -17,7 +17,7 @@ const Home: NextPage = () => {
         </p>
 
         <div className="flex  items-center justify-around max-w-md mt-6 sm:w-full">
-          <NextLink href="/oefenen">
+          <NextLink href="/practice">
             <button className="mx-2 py-4 w-72 flex justify-center text-left border rounded-[400px] bg-black text-white">
               <h3 className="text-2xl">Oefenen</h3>
             </button>
@@ -28,7 +28,6 @@ const Home: NextPage = () => {
             </button>
           </NextLink>
         </div>
-
       </main >
     </div >
   );
