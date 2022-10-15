@@ -11,7 +11,7 @@ export default function MainLayout({ children }: Props) {
       <Head>
         <title>T3 Spelling</title>
       </Head>
-      <div className="bg-slate-800 text-blue-50 break-words leading-6 font-mono min-h-screen">
+      <div className="bg-white text-zinc-800 break-words leading-6 font-mono min-h-screen">
         <Header />
         <div>
           {children}

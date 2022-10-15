@@ -1,7 +1,4 @@
-
-import { trpc } from '@/utils/trpc';
 import { signIn, signOut, useSession } from 'next-auth/react';
-import { resolveHref } from 'next/dist/shared/lib/router/router';
 import NextLink from 'next/link';
 
 const Header = () => {
@@ -10,11 +7,10 @@ const Header = () => {
       <div className="mx-24 py-8">
         <nav className="flex item-center justify-between text-base">
           <h2 className="text-2xl font-bold py-2">
-            T3-spelling
+            T3-spell
           </h2>
           <div className="items-center gap-8 hidden md:flex py-2">
             <HeaderLink href="/about" name="Oefenen" />
-            <HeaderLink href="/about" name="Over Ons" />
           </div>
           <AuthShowcase />
         </nav>
