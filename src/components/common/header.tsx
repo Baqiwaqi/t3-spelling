@@ -1,11 +1,11 @@
 import { signIn, signOut, useSession } from 'next-auth/react';
 import NextLink from 'next/link';
 import { Menu, Transition } from '@headlessui/react';
-import { Fragment, useEffect, useRef, useState } from 'react'
+import { Fragment } from 'react'
 
 const Header = () => {
   return (
-    <header className="fixed w-full z-30 bg-white text-zinc-800" >
+    <header className="fixed w-full z-30 bg-white text-zinc-800 max-w-5xl mx-auto" >
       <div className="mx-24 py-8">
         <nav className="flex item-center justify-between text-base">
           <NextLink href="/">
@@ -58,7 +58,7 @@ const AuthShowcase: React.FC = () => {
 const SignInButton: React.FC = () => {
   return (
     <button
-      className=" border border-black rounded-3xl bg-black text-white px-4 py-2 text-xl shadow-lg"
+      className=" border border-black rounded-3xl bg-black text-white px-4 py-1 text-xl shadow-lg"
       onClick={() => signIn()}
     >
       Sign in
@@ -100,21 +100,18 @@ const SignedInDropdown: React.FC = () => {
         <Menu.Items className="absolute right-0 mt-2 w-56 origin-top-right divide-y divide-gray-100 rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
           <div className="px-1 py-1 ">
             <Menu.Item>
-              {({ active }) => (
-                <NextLink href="/profile">
-                  <button
-                    className={`${active ? 'bg-blue-500 text-white' : 'text-gray-900'} group flex w-full items-center rounded-md px-2 py-2 text-sm`}
-                  >
-                    Profile
-
-                  </button>
-                </NextLink>
-              )}
+              <NextLink href="/profile">
+                <button
+                  className='text-black hover:bg-zinc-500 hover:text-white oup flex w-full items-center rounded-md px-2 py-2 text-sm'
+                >
+                  Profile
+                </button>
+              </NextLink>
             </Menu.Item>
             <Menu.Item>
               {({ active }) => (
                 <button
-                  className={`${active ? 'bg-blue-500 text-white' : 'text-gray-900'} group flex w-full items-center rounded-md px-2 py-2 text-sm`}
+                  className={`${active ? 'bg-zinc-500 text-white' : 'text-gray-900'} group flex w-full items-center rounded-md px-2 py-2 text-sm`}
                   onClick={() => signOut()}
                 >
                   Sign out
