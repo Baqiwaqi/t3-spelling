@@ -9,13 +9,11 @@ interface Props {
 }
 
 const Profile: React.FC<Props> = ({ user }) => {
-  console.log(user);
-
   return (
     <div className="flex flex-col">
       <h1 className="font-semibold text-xl">User Profile</h1>
-      <div className="flex items-center justify-between pt-10">
-        <Image src={user.image || ""} width={200} height={200} alt="ProfilePic" style={{ borderRadius: "50%" }} />
+      <div className="flex items-center justify-between pt-10 ">
+        <Image className="p" src={user.image || ""} width={200} height={200} alt="ProfilePic" style={{ borderRadius: "50%" }} />
         <div className="flex flex-col w-80">
           <div className="flex flex-col my-2">
             <p className="block text-sm font-medium text-gray-700">Name</p>
