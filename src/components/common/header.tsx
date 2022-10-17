@@ -68,6 +68,7 @@ const SignInButton: React.FC = () => {
 
 const SignedInDropdown: React.FC = () => {
   const { data: sessionData } = useSession();
+
   return (
     <Menu as="div" className="relative inline-block text-left">
       <div>

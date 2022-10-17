@@ -21,6 +21,13 @@ model Word {
     id String @id @default(cuid())
     word String
     PracticeSessionWord PracticeSessionWord[]
+    WordList WordList[]
+}
+
+model WordList {
+    id String @id @default(cuid())
+    name String
+    Word Word[]
 }
 
 model PracticeSession {

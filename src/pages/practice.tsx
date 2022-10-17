@@ -4,8 +4,7 @@ import { textToSpeech } from '../utils/textToSpeech'
 const Practise = () => {
   const [text, setText] = useState('Hond')
   const [input, setInput] = useState<string>();
-  const [strikes, setStrikes] = useState(0)
-  const [success, setSuccess] = useState(false)
+
 
   function checkWord() {
     if (input === text) {
@@ -16,11 +15,11 @@ const Practise = () => {
   }
 
   return (
-    <div className="p-16">
-      <h1 className="text-6xl font-bold">
+    <div className="pt-8">
+      <h1 className="text-2xl font-bold">
         Oefenen
       </h1>
-      <p className="mt-3 text-2xl">
+      <p className="mt-3 text-sm">
         Oefen hier je spelling door naar het woord te luisteren en het juiste woord in te vullen. Ja kan zo vaak oefen als je wilt. De test resultaten worden opgeslagen en je kan je resultaten bekijken in je profiel.
       </p>
       <div className="flex w-full justify-center">
